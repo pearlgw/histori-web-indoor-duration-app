@@ -68,7 +68,7 @@ const GetDataIndoorDuration: React.FC<Props> = ({
                                 <th scope="col" className="px-6 py-3">Name</th>
                                 <th scope="col" className="px-6 py-3">Total Duration</th>
                                 <th scope="col" className="px-6 py-3">Created At</th>
-                                <th scope="col" className="px-6 py-3">Action</th>
+                                {/* <th scope="col" className="px-6 py-3">Action</th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -84,14 +84,14 @@ const GetDataIndoorDuration: React.FC<Props> = ({
                                         )}
                                     </td>
                                     <td className="px-6 py-4">{formatDate(person.created_at)}</td>
-                                    <td className="px-6 py-4">
+                                    {/* <td className="px-6 py-4">
                                         <a
                                             href={`/person-durations/${person.id}`}
                                             className="text-blue-500 hover:underline"
                                         >
                                             View Details
                                         </a>
-                                    </td>
+                                    </td> */}
                                 </tr>
                             ))}
                         </tbody>
