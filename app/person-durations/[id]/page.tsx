@@ -13,7 +13,7 @@ type PersonDetail = {
 };
 
 async function fetchPersonDetails(id: string): Promise<PersonDetail[]> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BACKEND}/person-durations/${id}/details`, {
+    const res = await fetch(`https://bengkelkoding.dinus.id/indoor-api/person-durations/${id}/details`, {
         cache: 'no-store', // Selalu fetch data terbaru
     });
 
@@ -67,7 +67,7 @@ export default async function PersonDurationDetails({
             {details && details.length > 0 ? (
                 details.find(detail => detail.labeled_image) ? (
                     <img
-                        src={`${process.env.NEXT_PUBLIC_API_BACKEND}/person-durations/show-labeled-image?filename=${details.find(detail => detail.labeled_image)?.labeled_image}`}
+                        src={`https://bengkelkoding.dinus.id/indoor-api/person-durations/show-labeled-image?filename=${details.find(detail => detail.labeled_image)?.labeled_image}`}
                         alt="Gambar 1" className='w-96'
                     />
                 ) : (

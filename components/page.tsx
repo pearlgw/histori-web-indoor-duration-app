@@ -22,7 +22,7 @@ const TableImageDurations = () => {
     // Fungsi untuk mengambil data dari API
     const getData = async () => {
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_BACKEND}/person-durations`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_BACKEND}/person-durations/`);
             const data = await response.json();
 
             setData(data);
